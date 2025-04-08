@@ -17,3 +17,7 @@ Idea here is to build a Single SPA React starter kit that is good for small to m
 - `pnpm` as our _package manager_.
 - `vite` as our _build tool_.
 - `react` (V19) as our _UI library_.
+
+## Committing
+
+We use commit prompts
