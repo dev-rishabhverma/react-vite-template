@@ -20,4 +20,4 @@ Idea here is to build a Single SPA React starter kit that is good for small to m
 
 ## Committing
 
-We use commit prompts
+We use commitlint with prompts to commit messages.
