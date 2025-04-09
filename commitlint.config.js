@@ -1,12 +1,43 @@
-// build: Changes that affect the build system or external dependencies (example scopes: gulp, broccoli, npm)
-// ci: Changes to our CI configuration files and scripts (example scopes: Travis, Circle, BrowserStack, SauceLabs)
-// docs: Documentation only changes
-// feat: A new feature
-// fix: A bug fix
-// perf: A code change that improves performance
-// refactor: A code change that neither fixes a bug nor adds a feature
-// style: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
-// test: Adding missing tests or correcting existing tests
+// Commit types for consistent messages:
+// build:    changes to build system or dependencies (e.g., npm, webpack)
+// ci:       CI config changes (e.g., GitHub Actions, Travis)
+// docs:     documentation-only changes
+// feat:     a new feature ✨
+// fix:      a bug fix 🐛
+// perf:     performance improvements 🚀
+// refactor: code changes that don't fix a bug or add a feature 🔧
+// revert:   revert a previous commit ⏪
+// style:    formatting, white-space, missing semi-colons (no code change) 🎨
+// test:     adding or updating tests ✅
+
+// ✅ Example commit messages:
+
+// 🧩 With type and scope:
+/**
+ * feat(auth): add JWT-based login system
+ */
+
+// 📄 With type only:
+/**
+ * docs: update README with setup instructions
+ */
+
+// 🐞 With type, scope, and body:
+/**
+ * fix(api): handle 500 error for user creation
+ *
+ * Improve error handling for edge cases where the user email already exists.
+ */
+
+// 🚀 With type, scope, body, and footer:
+/**
+ * perf(db): optimize query for user lookup
+ *
+ * Reduced response time by indexing the `email` field.
+ *
+ * Closes #42
+ */
+
 export default {
   extends: ['@commitlint/config-conventional'],
   rules: {
