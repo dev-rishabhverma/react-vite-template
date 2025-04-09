@@ -1,0 +1,2 @@
+echo "Running linting check..."
+pnpm lint
