@@ -1,2 +1,2 @@
-echo "Running linting check..."
-pnpm lint
+echo "Running auto formatting and linting if any..."
+pnpm exec lint-staged
