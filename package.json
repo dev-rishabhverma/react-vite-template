@@ -34,8 +34,7 @@
   },
   "lint-staged": {
     "**/*.{js,ts,tsx,jsx,json,jsonc,json5}": [
-      "pnpm lint:fix --",
-      "git add"
+      "pnpm lint:fix --"
     ]
   },
   "name": "base-react-template",
