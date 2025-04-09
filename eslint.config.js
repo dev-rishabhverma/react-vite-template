@@ -2,6 +2,7 @@ import js from '@eslint/js'
 import { defineConfig } from 'eslint/config'
 import prettierConfig from 'eslint-config-prettier'
 import jsonc from 'eslint-plugin-jsonc'
+import jsxA11y from 'eslint-plugin-jsx-a11y'
 import prettier from 'eslint-plugin-prettier'
 import pluginReact from 'eslint-plugin-react'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
@@ -118,6 +119,42 @@ export default defineConfig([
       'jsonc/quote-props': ['error', 'always'],
       // No trailing commas
       'jsonc/comma-dangle': ['error', 'never'],
+    },
+  },
+
+  //🧑‍🦯 Accessibility rules for JSX elements
+  {
+    files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
+    plugins: {
+      'jsx-a11y': jsxA11y,
+    },
+    rules: {
+      // Ensure <img> tags have alt text
+      'jsx-a11y/alt-text': 'warn',
+      // Avoid empty or contentless anchor tags
+      'jsx-a11y/anchor-has-content': 'warn',
+      // Prevent <a> tags without valid href or with invalid href
+      'jsx-a11y/anchor-is-valid': 'warn',
+      // Ensure <html> tag has a lang attribute
+      'jsx-a11y/html-has-lang': 'warn',
+      // <iframe> elements must have a title
+      'jsx-a11y/iframe-has-title': 'warn',
+      // Warn on redundant words in <img alt=""> like "image", "photo", etc.
+      'jsx-a11y/img-redundant-alt': 'warn',
+      // Every <label> should have an associated form control
+      'jsx-a11y/label-has-associated-control': 'warn',
+      // Elements with ARIA roles must have required ARIA attributes
+      'jsx-a11y/role-has-required-aria-props': 'warn',
+      // Avoid redundant ARIA roles (e.g., <button role="button">)
+      'jsx-a11y/no-redundant-roles': 'warn',
+      // Only use ARIA roles/props that are valid
+      'jsx-a11y/aria-role': 'warn',
+      'jsx-a11y/aria-props': 'warn',
+      'jsx-a11y/aria-proptypes': 'warn',
+      // For videos
+      'jsx-a11y/media-has-caption': 'warn',
+      // If using <html lang="">
+      'jsx-a11y/lang': 'warn',
     },
   },
 ])
