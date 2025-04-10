@@ -3,7 +3,6 @@ import { defineConfig } from 'eslint/config'
 import prettierConfig from 'eslint-config-prettier'
 import jsonc from 'eslint-plugin-jsonc'
 import jsxA11y from 'eslint-plugin-jsx-a11y'
-import prettier from 'eslint-plugin-prettier'
 import pluginReact from 'eslint-plugin-react'
 import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import globals from 'globals'
@@ -28,7 +27,14 @@ export default defineConfig([
   tseslint.configs.recommended,
 
   // ⚛️ React recommended (flat config style)
-  pluginReact.configs.flat.recommended,
+  {
+    ...pluginReact.configs.flat.recommended,
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
 
   // 🧹 Disable ESLint formatting that conflicts with Prettier
   prettierConfig,
@@ -37,7 +43,6 @@ export default defineConfig([
   {
     files: ['**/*.{js,mjs,cjs,ts,jsx,tsx}'],
     plugins: {
-      prettier,
       'simple-import-sort': simpleImportSort,
     },
     rules: {
@@ -53,10 +58,6 @@ export default defineConfig([
       // Warn for unescaped characters like < or >
       'react/no-unescaped-entities': 'warn',
 
-      // 💅 PRETTIER RULES
-      // Treat Prettier violations as errors
-      'prettier/prettier': 'error',
-
       // 📦 IMPORT SORTING RULES
       // Sort import statements alphabetically/grouped
       'simple-import-sort/imports': 'warn',
@@ -67,9 +68,6 @@ export default defineConfig([
       // Allow console.warn and console.error only
       // e.g., console.log() => warn
       'no-console': ['warn', { allow: ['warn', 'error'] }],
-      // Ignore unused variables prefixed with _
-      // e.g., (_unused) => OK
-      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
       // Same for TS unused vars
       '@typescript-eslint/no-unused-vars': [
         'warn',
@@ -85,17 +83,8 @@ export default defineConfig([
       'no-empty': ['warn', { allowEmptyCatch: true }],
       // Allow reassignment of function parameters, but not their props
       'no-param-reassign': ['warn', { props: false }],
-      // Disable unresolved import errors (can be false positives in monorepos)
-      'import/no-unresolved': 'off',
       // Allow named exports even if only one export is present
       'import/prefer-default-export': 'off',
-    },
-
-    // Auto-detect React version
-    settings: {
-      react: {
-        version: 'detect',
-      },
     },
   },
 
@@ -156,5 +145,16 @@ export default defineConfig([
       // If using <html lang="">
       'jsx-a11y/lang': 'warn',
     },
+  },
+  // 🗂️ Ignored files and directories
+  {
+    ignores: [
+      'node_modules/',
+      'dist/',
+      '.env',
+      '*.config.js',
+      'public/',
+      'coverage/',
+    ],
   },
 ])
