@@ -17,3 +17,25 @@ Idea here is to build a Single SPA React starter kit that is good for small to m
 - `pnpm` as our _package manager_.
 - `vite` as our _build tool_.
 - `react` (V19) as our _UI library_.
+
+## Linting and formatting
+
+### Project uses eslint for linting
+
+- Simple sort plugin added for sorting import
+- Will lint - JS, JSX, TS, TSX, JSON
+- Added some basic accessability checks
+- Added some rules to ignore some lint
+
+### Project uses prettier for formatting
+
+- Comes with config file to enforce some commonly accepted rules
+
+Project also comes with vscode settings configuration to enforce the above two.
+
+TODO:
+[] Add vitest
+[] Add tailwind
+[] Add routing
+[] Add state management
+[] Add other popular lib needed

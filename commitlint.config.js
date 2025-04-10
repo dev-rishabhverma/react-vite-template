@@ -2,6 +2,7 @@
 // build:    changes to build system or dependencies (e.g., npm, webpack)
 // ci:       CI config changes (e.g., GitHub Actions, Travis)
 // docs:     documentation-only changes
+// chore:    miscellaneous tasks that don't modify source or test files
 // feat:     a new feature ✨
 // fix:      a bug fix 🐛
 // perf:     performance improvements 🚀
@@ -63,6 +64,7 @@ export default {
         'build',
         'ci',
         'docs',
+        'chore',
         'feat',
         'fix',
         'perf',
