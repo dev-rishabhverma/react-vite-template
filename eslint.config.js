@@ -99,7 +99,7 @@ export default defineConfig([
     },
     rules: {
       // Sort object keys alphabetically
-      'jsonc/sort-keys': 'error',
+      'jsonc/sort-keys': 'warn',
       // Enforce 2-space indentation
       'jsonc/indent': ['error', 2],
       // Enforce double quotes

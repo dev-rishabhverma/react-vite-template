@@ -1,2 +1,4 @@
-echo "Running auto formatting and linting if any...before pushing"
-pnpm exec lint-staged
+echo "Running ESLint and Prettier checks before pushing..."
+pnpm lint
+pnpm format:check
+

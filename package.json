@@ -46,6 +46,7 @@
     "build": "tsc -b && vite build",
     "dev": "vite",
     "format": "prettier --write . && pnpm lint:fix",
+    "format:check": "prettier --check .",
     "lint": "eslint .",
     "lint:fix": "eslint --fix .",
     "preinstall": "npx only-allow pnpm",
