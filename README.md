@@ -1,41 +1,25 @@
-# Base React Template
+# 🚀 Base React Template
 
-This is a base template for a React project.
-Idea here is to build a Single SPA React starter kit that is good for small to medium sized projects.
+This repository serves as a base template for creating React projects. It provides a foundational setup with modern tools and configurations, designed to be extended for specific use cases.
 
-## Template use cases
+## 🎯 Purpose & Usage
 
-- Small to medium sized projects.
-- Could be scaled to large projects with micro frontend and monorepos.
-- SPA Client side rendered applications.
+This template is intended to be inherited by other repositories, these repositories could be of small scale or even large scale applications.
 
-> It includes modern tools for **improved DX** and **performance** which is **stable** and **good for production**.
+This repo would be a template repository, you can just create a new repo by using this template.
 
-## Base tooling
+## ✨ Features
 
-- `node` (V22) as our _runtime_.
-- `pnpm` as our _package manager_.
-- `vite` as our _build tool_.
-- `react` (V19) as our _UI library_.
+- **Build Tool**: Vite (v4.3) for fast builds and development.
+- **UI Library**: React (v19).
+- **Package Manager**: pnpm for efficient dependency management.
+- **Linting**: ESLint with plugins for accessibility, import sorting, and React-specific rules.
+- **Formatting**: Prettier for consistent code style.
+- **TypeScript**: Included for type safety.
+- **VSCode Settings**: Pre-configured `.vscode/settings.json` to enforce consistent editor behavior, such as formatting and linting on save and proper TypeScript integration.
 
-## Linting and formatting
+## 🛠️ Tooling Highlights
 
-### Project uses eslint for linting
-
-- Simple sort plugin added for sorting import
-- Will lint - JS, JSX, TS, TSX, JSON
-- Added some basic accessability checks
-- Added some rules to ignore some lint
-
-### Project uses prettier for formatting
-
-- Comes with config file to enforce some commonly accepted rules
-
-Project also comes with vscode settings configuration to enforce the above two.
-
-TODO:
-[] Add vitest
-[] Add tailwind
-[] Add routing
-[] Add state management
-[] Add other popular lib needed
+- **Node.js**: Requires Node.js v22.
+- **Husky & Lint-Staged**: Pre-commit, Pre-push hooks run ESLint for linting and Prettier for formatting before any commit.
+- **commitlint**: Ensure proper commit conventions integrated with husky, see commitlint.config.js file for more.
