@@ -23,3 +23,8 @@ This repo would be a template repository, you can just create a new repo by usin
 - **Node.js**: Requires Node.js v22.
 - **Husky & Lint-Staged**: Pre-commit, Pre-push hooks run ESLint for linting and Prettier for formatting before any commit.
 - **commitlint**: Ensure proper commit conventions integrated with husky, see commitlint.config.js file for more.
+
+
+## Todo
+[ ] Add stylelint
+
