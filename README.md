@@ -1,3 +1,5 @@
+# WIP
+
 # 🚀 Base React Template
 
 This repository serves as a base template for creating React projects. It provides a foundational setup with modern tools and configurations, designed to be extended for specific use cases.
@@ -23,7 +25,3 @@ This repo would be a template repository, you can just create a new repo by usin
 - **Node.js**: Requires Node.js v22.
 - **Husky & Lint-Staged**: Pre-commit, Pre-push hooks run ESLint for linting and Prettier for formatting before any commit.
 - **commitlint**: Ensure proper commit conventions integrated with husky, see commitlint.config.js file for more.
-
-## Todo
-
-[ ] Add stylelint
