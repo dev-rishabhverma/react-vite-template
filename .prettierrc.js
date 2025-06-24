@@ -1,4 +1,6 @@
 export default {
+  // Tailwind plugin for class sorting
+  plugins: ['prettier-plugin-tailwindcss'],
   // No semicolons — `const x = 5` instead of `const x = 5;`
   semi: false,
   // Use single quotes — `'hello'` instead of `"hello"`
